@@ -19,7 +19,7 @@
         "url": "git+https://github.com/academia-geek/demo-day-projects-deliveryFood.git"
     },
     "engines": {
-        "node": ">=16.15.0"
+        "node": ">=12.22.0"
     },
     "keywords": [
         "mongodb",
