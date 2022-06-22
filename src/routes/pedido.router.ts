@@ -44,7 +44,8 @@ export default routerPedido;
  *         estadoDelPedido:
  *           type: string
  *           enum:
- *             - "Recibido"
+ *             - "En revision"
+ *             - "Aceptado"
  *             - "Preparando"
  *             - "En camino"
  *             - "Entregado"
@@ -60,6 +61,15 @@ export default routerPedido;
  *         descuento:
  *           type: number
  *           example: 0
+ *        id_establecimiento:
+ *           type: integer
+ *           example: 1
+ *        id_repartidor:
+ *           type: integer
+ *           example: 1
+ *       id_calificacion:
+ *           type: integer
+ *           example: 1
  *       required:
  *         - codigoOrden
  *         - id_usuario
@@ -79,7 +89,7 @@ export default routerPedido;
  *         impuestos: 2
  *         tipoEntrega: "Domicilio"
  *         valorDomicilio: 2
- *         estadoDelPedido: "Recibido"
+ *         estadoDelPedido: "Aceptado"
  *         hora: "12:00"
  *         fecha: "2020-01-01"
  *         valorTotal: 2
