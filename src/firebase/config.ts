@@ -5,12 +5,12 @@ import {ServiceAccount} from 'firebase-admin';
 import * as dotenv from 'dotenv';
 dotenv.config();
 const firebaseConfig = {
-    apiKey: "AIzaSyC8k1DSfWd2zuXGhFx27YIto3ulWNGzNO8",
-    authDomain: "delivery-food-20027.firebaseapp.com",
-    projectId: "delivery-food-20027",
-    storageBucket: "delivery-food-20027.appspot.com",
-    messagingSenderId: "606489646430",
-    appId: "1:606489646430:web:a6cf3a364d59281f8e6bcf"
+    apiKey: process.env.FIREBASE_API_KEY,
+    authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.FIREBASE_PROJECT_ID,
+    storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.FIREBASE_APP_ID,
 };
 const app = initializeApp(firebaseConfig);
 

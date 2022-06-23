@@ -1,8 +1,10 @@
 import { Request, Response } from "express";
 import { pool } from "../db/db";
 import { QueryResult } from "pg";
+import dotenv from 'dotenv';
 const express = require("express");
 const axios = require("axios");
+dotenv.config();
 
 export const getDireccion = async (req: Request, res: Response): Promise<Response> => {
     try {
@@ -21,7 +23,7 @@ export const createDireccion = async (req: Request, res: Response) => {
             .get("https://maps.googleapis.com/maps/api/geocode/json", {
                 params: {
                     address: direccion,
-                    key: "AIzaSyCf405bhXq-7cbuFA5ZzvKlHIBtUvTaToM",
+                    key: process.env.GOOGLE_API_KEY,
                 },
             })
             .then(function (response: { data: { results: { geometry: { location: { lng: any; lat: any } } }[] } }) {
